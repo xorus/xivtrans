@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import 'antd/dist/antd.dark.css';
 import {Affix, Checkbox, Input, Layout} from "antd";
@@ -9,6 +9,10 @@ import {ResultItem} from "./component/ResultItem";
 const languages: XivLang[] = ["en", "fr", "ja", "de"];
 
 async function runSearch(term: string, lang: XivLang) {
+    if (term.length === 0) {
+        return false;
+    }
+
     console.log("Searching for " + term);
 
     const query = await fetch("https://xivapi.com/search?language=" + lang +
@@ -23,7 +27,7 @@ async function runSearch(term: string, lang: XivLang) {
 }
 
 function App() {
-    const [search, setSearch] = useState<string>("bowl");
+    const [search, setSearch] = useState<string>("");
     const [results, setResults] = useState<Result[]>([]);
 
     // fixme: not safe
@@ -44,12 +48,14 @@ function App() {
         _setLang(lang);
     }
 
-    const doSearch = async () => {
-        const results = await runSearch(search, lang);
-        if (results) {
-            setResults(results);
-        }
-    };
+    useEffect(() => {
+        (async () => {
+            const results = await runSearch(search, lang);
+            if (results) {
+                setResults(results);
+            }
+        })();
+    }, [lang, search]);
 
     return (
         <Layout>
@@ -83,7 +89,6 @@ function App() {
                                               onChange={(value) => setLang(value)}/>
                                 <Input.Search size={"large"} onSearch={newValue => {
                                     setSearch(newValue);
-                                    doSearch();
                                 }} autoFocus={true} style={{width: "80vw"}}/>
                             </Input.Group>
                         </div>
