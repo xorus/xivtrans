@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff804c53ace227f7911d25118202c6f4",
+    "revision": "f59832c24e173c85a628698b4d52ae55",
     "url": "/xivtrans/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xivtrans/static/css/2.5dc01304.chunk.css"
   },
   {
-    "revision": "ff38df551e3a36a22906",
+    "revision": "887022c6eb120872d648",
     "url": "/xivtrans/static/css/main.cf840f27.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xivtrans/static/js/2.e460c30d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ff38df551e3a36a22906",
-    "url": "/xivtrans/static/js/main.6722dafc.chunk.js"
+    "revision": "887022c6eb120872d648",
+    "url": "/xivtrans/static/js/main.b77aea69.chunk.js"
   },
   {
     "revision": "398cf3a40758bb64d5b8",

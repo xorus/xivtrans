@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/xivtrans/static/css/main.cf840f27.chunk.css",
-    "main.js": "/xivtrans/static/js/main.6722dafc.chunk.js",
-    "main.js.map": "/xivtrans/static/js/main.6722dafc.chunk.js.map",
+    "main.js": "/xivtrans/static/js/main.b77aea69.chunk.js",
+    "main.js.map": "/xivtrans/static/js/main.b77aea69.chunk.js.map",
     "runtime-main.js": "/xivtrans/static/js/runtime-main.5a632e74.js",
     "runtime-main.js.map": "/xivtrans/static/js/runtime-main.5a632e74.js.map",
     "static/css/2.5dc01304.chunk.css": "/xivtrans/static/css/2.5dc01304.chunk.css",
     "static/js/2.e460c30d.chunk.js": "/xivtrans/static/js/2.e460c30d.chunk.js",
     "static/js/2.e460c30d.chunk.js.map": "/xivtrans/static/js/2.e460c30d.chunk.js.map",
     "index.html": "/xivtrans/index.html",
-    "precache-manifest.fbc0bbe3f407a220b467a8e048b0e99e.js": "/xivtrans/precache-manifest.fbc0bbe3f407a220b467a8e048b0e99e.js",
+    "precache-manifest.54e1f1255d1d4e3d8a74a635557ea7b1.js": "/xivtrans/precache-manifest.54e1f1255d1d4e3d8a74a635557ea7b1.js",
     "service-worker.js": "/xivtrans/service-worker.js",
     "static/css/2.5dc01304.chunk.css.map": "/xivtrans/static/css/2.5dc01304.chunk.css.map",
     "static/css/main.cf840f27.chunk.css.map": "/xivtrans/static/css/main.cf840f27.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.5dc01304.chunk.css",
     "static/js/2.e460c30d.chunk.js",
     "static/css/main.cf840f27.chunk.css",
-    "static/js/main.6722dafc.chunk.js"
+    "static/js/main.b77aea69.chunk.js"
   ]
 }
