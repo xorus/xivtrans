@@ -26,13 +26,32 @@ async function runSearch(term: string, lang: XivLang) {
     return results.Results as Result[];
 }
 
+let _savedLangCache: XivLang[] | null = null;
+
+/**
+ * Validate possible user input (don't allow an invalid lang)
+ */
+function getSavedLangs(): XivLang[] {
+    if (_savedLangCache !== null) {
+        return _savedLangCache;
+    }
+
+    const savedDisplayedLangs = JSON.parse(localStorage.getItem("displayedLangs") ?? '["en", "fr"]');
+    const displayedLangs: XivLang[] = [];
+    savedDisplayedLangs.forEach((item: string) => {
+        if ((languages as string[]).includes(item)) {
+            displayedLangs.push(item as XivLang);
+        }
+    })
+
+    return displayedLangs;
+}
+
 function App() {
     const [search, setSearch] = useState<string>("");
     const [results, setResults] = useState<Result[]>([]);
 
-    // fixme: not safe
-    const savedDisplayedLangs = JSON.parse(localStorage.getItem("displayedLangs") ?? '["en", "fr"]');
-    const [displayedLangs, _setDisplayedLangs] = useState<XivLang[]>(savedDisplayedLangs);
+    const [displayedLangs, _setDisplayedLangs] = useState<XivLang[]>(getSavedLangs());
     const setDisplayedLangs = (langs: XivLang[]) => {
         localStorage.setItem("displayedLangs", JSON.stringify(langs));
         _setDisplayedLangs(langs);
