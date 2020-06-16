@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import 'antd/dist/antd.dark.css';
-import {Affix, Checkbox, Input, Layout} from "antd";
+import {Affix, Checkbox, Col, Input, Layout, Row} from "antd";
 import {Result, XivLang} from "./types";
 import {LangSelector} from "./component/LangSelector";
 import {ResultItem} from "./component/ResultItem";
@@ -112,11 +112,15 @@ function App() {
                             </Input.Group>
                         </div>
                     </Affix>
-                    <div className={"results"}>
-                        {results.map((result: any) => {
-                            return <ResultItem key={result.ID} displayedLangs={displayedLangs} item={result}/>;
-                        })}
-                    </div>
+                    <Row justify={"center"}>
+                        <Col xs={24} sm={20} md={16} lg={10}>
+                            <div className={"results"}>
+                                {results.map((result: any) => {
+                                    return <ResultItem key={result.ID} displayedLangs={displayedLangs} item={result}/>;
+                                })}
+                            </div>
+                        </Col>
+                    </Row>
                 </div>
             </Layout.Content>
         </Layout>

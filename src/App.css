@@ -41,12 +41,6 @@
     }
 }
 
-
-.results {
-    width: 40vw;
-    margin: auto;
-}
-
 .results .result {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 5px;
